@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EroTrack - Monitoramento de Árvores Urbanas</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">🌿 EroTrack</div>
+        <nav>
+            <a href="#mapa">Mapa</a>
+            <a href="#estatisticas">Estatísticas</a>
+            <a href="#cadastro">Cadastro</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Monitore e cuide das árvores da sua cidade</h1>
+            <p>Com o EroTrack, você acompanha a saúde e localização das árvores urbanas em tempo real.</p>
+            <a href="#mapa" class="btn">Ver Mapa</a>
+        </section>
+
+        <!-- Mapa -->
+        <section id="mapa" class="content">
+            <h2>Mapa de Monitoramento</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Estatísticas -->
+        <section id="estatisticas" class="content">
+            <h2>Estatísticas</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Total de Árvores Monitoradas</h3>
+                    <p id="total-arvores">0</p>
+                </div>
+                <div class="card">
+                    <h3>Árvores Necessitando Atenção</h3>
+                    <p id="atencao-arvores">0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cadastro -->
+        <section id="cadastro" class="content">
+            <h2>Cadastrar Nova Árvore</h2>
+            <form id="form-arvore">
+                <label>Nome Popular:</label>
+                <input type="text" id="nome" placeholder="Ex: Ipê Amarelo" required>
+
+                <label>Coordenadas GPS:</label>
+                <input type="text" id="coordenadas" placeholder="-23.5505, -46.6333" required>
+
+                <label>Condição:</label>
+                <select id="condicao">
+                    <option>Saudável</option>
+                    <option>Doente</option>
+                    <option>Risco de Queda</option>
+                </select>
+
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 EroTrack - Monitoramento de Árvores Urbanas</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
